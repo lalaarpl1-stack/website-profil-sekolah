@@ -1,0 +1,639 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #ffffff;
+    color: #172b4d;
+}
+
+/* HEADER */
+.header {
+    width: 100%;
+    background: #ffffff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 7%;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.logo h2 {
+    font-size: 20px;
+    color: #102a43;
+}
+
+.logo p {
+    font-size: 12px;
+    color: #2563eb;
+    letter-spacing: 2px;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    list-style: none;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #172b4d;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.nav-menu a:hover {
+    color: #2563eb;
+}
+
+/* HERO */
+.hero {
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    padding: 80px 7%;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(8, 30, 55, 0.9),
+            rgba(8, 30, 55, 0.35)
+        ),
+        url("../img/foto\ sekolah.jpeg");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content {
+    max-width: 700px;
+    color: white;
+}
+
+.hero-content span {
+    font-size: 16px;
+    letter-spacing: 4px;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    line-height: 1.2;
+    margin: 20px 0;
+}
+
+.hero-content p {
+    font-size: 17px;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.hero-button {
+    display: inline-block;
+    background: #2563eb;
+    color: white;
+    padding: 14px 28px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.hero-button:hover {
+    background: #1d4ed8;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-menu {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero {
+        min-height: 500px;
+    }
+
+    .hero-content h1 {
+        font-size: 34px;
+    }
+
+}
+
+/* PROFIL SEKOLAH */
+.profil {
+    padding: 100px 7%;
+    background: #ffffff;
+}
+
+.profil-container {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.profil-image {
+    flex: 1;
+}
+
+.profil-image img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.profil-text {
+    flex: 1;
+}
+
+.subtitle {
+    color: #2563eb;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.profil-text h2 {
+    color: #102a43;
+    font-size: 32px;
+    line-height: 1.4;
+    margin: 18px 0;
+}
+
+.profil-text p {
+    color: #64748b;
+    font-size: 15px;
+    line-height: 1.9;
+    margin-bottom: 15px;
+}
+
+.profil-button {
+    display: inline-block;
+    margin-top: 15px;
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.profil-button:hover {
+    color: #102a43;
+}
+
+/* RESPONSIVE PROFIL */
+@media (max-width: 768px) {
+
+    .profil-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .profil-image img {
+        height: 260px;
+    }
+
+    .profil-text h2 {
+        font-size: 26px;
+    }
+
+}
+
+/* SEJARAH SEKOLAH */
+.sejarah {
+    padding: 90px 7%;
+    background-color: #f1f5f9;
+}
+
+.sejarah-container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.sejarah-heading {
+    margin-bottom: 40px;
+}
+
+.sejarah-heading h2 {
+    font-size: 32px;
+    color: #102a43;
+    margin-top: 15px;
+}
+
+.sejarah-content {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.sejarah-image {
+    flex: 1;
+}
+
+.sejarah-image img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.sejarah-text {
+    flex: 1;
+}
+
+.sejarah-text h3 {
+    font-size: 23px;
+    color: #102a43;
+    margin-bottom: 20px;
+}
+
+.sejarah-text p {
+    color: #64748b;
+    font-size: 15px;
+    line-height: 1.9;
+    margin-bottom: 15px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+
+    .sejarah-content {
+        flex-direction: column;
+    }
+
+    .sejarah-image img {
+        height: 260px;
+    }
+
+    .sejarah-heading h2 {
+        font-size: 26px;
+    }
+}
+
+/* KOMPETENSI KEAHLIAN */
+.jurusan {
+    padding: 90px 7%;
+    background: #ffffff;
+}
+
+.jurusan-heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.jurusan-heading h2 {
+    font-size: 32px;
+    color: #102a43;
+    margin: 15px 0;
+}
+
+.jurusan-heading p {
+    color: #64748b;
+    line-height: 1.7;
+}
+
+.jurusan-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.jurusan-item {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.jurusan-item:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.jurusan-item img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+}
+
+.jurusan-info {
+    padding: 22px;
+}
+
+.jurusan-info h3 {
+    color: #102a43;
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+
+.jurusan-info p {
+    color: #64748b;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .jurusan-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .jurusan-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* BERITA DAN KEGIATAN */
+.berita {
+    padding: 70px 8%;
+    background-color: #f4f8fc;
+}
+
+.berita .container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.berita h2 {
+    font-size: 30px;
+    color: #17365d;
+    margin-bottom: 10px;
+}
+
+.subjudul {
+    color: #666;
+    margin-bottom: 35px;
+}
+
+.berita-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.berita-card {
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: 0.3s;
+}
+
+.berita-card:hover {
+    transform: translateY(-5px);
+}
+
+.berita-img {
+    height: 180px;
+    background-color: #dceafa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.berita-img span {
+    font-size: 55px;
+}
+
+.berita-info {
+    padding: 20px;
+}
+
+.berita-info h3 {
+    color: #17365d;
+    margin-bottom: 10px;
+}
+
+.berita-info p {
+    color: #666;
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+/* KONTAK SEKOLAH */
+.kontak {
+    padding: 70px 8%;
+    background-color: white;
+}
+
+.kontak .container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.kontak h2 {
+    font-size: 30px;
+    color: #17365d;
+    margin-bottom: 10px;
+}
+
+.kontak-container {
+    margin-top: 30px;
+    background-color: #f4f8fc;
+    padding: 30px;
+    border-radius: 12px;
+}
+
+.kontak-info h3 {
+    color: #17365d;
+    margin-bottom: 25px;
+}
+
+.kontak-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 22px;
+}
+
+.kontak-item span {
+    font-size: 25px;
+}
+
+.kontak-item h4 {
+    color: #17365d;
+    margin-bottom: 5px;
+}
+
+.kontak-item p {
+    color: #666;
+    font-size: 14px;
+}
+
+/* LOKASI SEKOLAH */
+.lokasi {
+    margin: 0;
+    padding: 20px 0 0;
+}
+
+.lokasi h2 {
+    margin-bottom: 15px;
+}
+
+.lokasi iframe {
+    display: block;
+    width: 100%;
+    height: 250px;
+    border: none;
+}
+
+/* FOOTER */
+footer {
+    margin-top: 0;
+    padding: 25px 0;
+}
+
+/* FOOTER WEBSITE */
+footer {
+    background-color: #17365d;
+    color: white;
+    text-align: center;
+    padding: 25px 10px;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+footer p {
+    margin: 0;
+    font-size: 16px;
+}
+
+/* Bagian Visi dan Misi */
+.visi-misi {
+    padding: 80px 8%;
+    background-color: #F1F5F9;
+}
+
+.judul-section {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.judul-section span {
+    color: #E63946;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.judul-section h2 {
+    color: #1D3557;
+    font-size: 32px;
+    margin: 10px 0;
+}
+
+.judul-section p {
+    color: #555;
+    line-height: 1.6;
+}
+
+.visi-misi-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.kartu-visi,
+.kartu-misi {
+    background: #FFFFFF;
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid #E2E8F0;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.kartu-visi {
+    border-top: 5px solid #1D3557;
+}
+
+.kartu-misi {
+    border-top: 5px solid #E63946;
+}
+
+.ikon-visi,
+.ikon-misi {
+    font-size: 30px;
+    color: #1D3557;
+    margin-bottom: 15px;
+}
+
+.kartu-visi h3,
+.kartu-misi h3 {
+    color: #1D3557;
+    font-size: 23px;
+    margin-bottom: 15px;
+}
+
+.kartu-visi p,
+.kartu-misi li {
+    color: #555;
+    line-height: 1.8;
+    font-size: 15px;
+}
+
+.kartu-misi ul {
+    padding-left: 20px;
+}
+
+.kartu-misi li {
+    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    .visi-misi {
+        padding: 60px 6%;
+    }
+
+    .visi-misi-container {
+        grid-template-columns: 1fr;
+    }
+
+    .judul-section h2 {
+        font-size: 26px;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+#sejarah,
+#visi-misi {
+    scroll-margin-top: 100px;
+}
